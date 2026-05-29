@@ -8,8 +8,6 @@
  */
 
 \defined('_JEXEC') or die;
-
-
 ?>
 
 <?php if ($module->showtitle): ?>
@@ -17,17 +15,17 @@
 <?php endif; ?>
 <?php if (!empty($params->get('panels'))) : ?>
 <div class="blocks-container blocksaccordion-container">
-<section>
-    <?php foreach ($params->get('panels') as $panel) : ?>
-    <details>
-        <summary>
-        <?php echo $panel->panel_title; ?>
-        </summary>
-        <div>
-        <?php echo $panel->panel_content; ?>
-        </div>
-    </details>
-    <?php endforeach; ?>
+    <section>
+        <?php foreach ($params->get('panels') as $panel) : ?>
+        <details>
+            <summary>
+            <?php echo $panel->panel_title; ?>
+            </summary>
+            <div>
+            <?php echo $panel->panel_content; ?>
+            </div>
+        </details>
+        <?php endforeach; ?>
     </section>
 </div>
 <?php endif; ?>
